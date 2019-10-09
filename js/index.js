@@ -30,18 +30,13 @@ body.addEventListener('dblclick', (e)=>{
     e.target.style.backgroundColor = 'teal';
 })
 
-//focus on contact form name turns background color purple -6
+//focus on contact form turns background color purple -6
 funbusH2 = document.querySelectorAll('#form input');
 funbusH2.forEach(data => {
 
     data.addEventListener('focus', (e)=>{
         e.target.style.backgroundColor = "purple";
     })
-})
-//stopped propagation on this input field so it turns red instead of purple - confused on this part
-funbusH2[1].addEventListener('mouseenter', (e)=>{
-    e.target.style.backgroundColor = 'red';
-    e.stopPropagation();
 })
 
 //body turns yellow on scroll -7
@@ -68,6 +63,15 @@ buttons.forEach(btn =>{
     })
 })
 
+test = document.querySelector('#test-div');
+test.addEventListener('click', (e)=>{
+    e.target.style.backgroundColor = 'green';
+})
+testbtn = document.querySelector('#test-div button');
+testbtn.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    e.target.style.fontSize = "20px";
+})
 
 
 
