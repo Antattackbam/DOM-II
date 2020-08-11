@@ -44,3 +44,29 @@ buttons.forEach(btn =>{
     })
 })
 
+destinationTitles = document.querySelectorAll('.destination h4');
+destinationTitles.forEach(d => {
+    d.addEventListener('click', (e)=> {
+        e.preventDefault();
+        e.target.style.fontSize = "40px";
+    })
+})
+destinationTitles[0].addEventListener('dblclick', (e)=>{
+    e.preventDefault();
+    e.target.style.backgroundColor = "black";
+    e.target.style.color = "red";
+})
+
+destinationTitles[1].addEventListener('dblclick', (e)=>{
+    e.preventDefault();
+    e.target.style.backgroundColor = "black";
+    e.target.style.color = "yellow";
+})
+
+destinationTitles[2].addEventListener('dblclick', (e)=>{
+    e.preventDefault();
+    e.target.style.backgroundColor = "black";
+    e.target.style.color = "green";
+})
+
+
